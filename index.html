@@ -508,10 +508,10 @@
             if (gclid) {
                 console.log('Google Ads traffic detected. GCLID:', gclid, 'Campaign ID:', campaignId);
 
-                if (MAKE_WEBHOOK_URL_GET_NUMBER === 'https://hook.eu2.make.com/qhjgoh5ia3brh0urle9ocvv8lpjht1h8') {
-                    console.warn('Make.com webhook URL is not configured. Dynamic number replacement will not occur. Please update the script with the correct Make.com webhook URL.');
-                    return; // Exit if webhook URL is not set
-                }
+if (MAKE_WEBHOOK_URL_GET_NUMBER === 'https://hook.eu2.make.com/qhjgoh5ia3brh0urle9ocvv8lpjht1h8') { // <<< CORRECTED LINE
+                console.warn('Make.com webhook URL is not configured. Dynamic number replacement will not occur. Please update the script with the correct Make.com webhook URL.');
+                return; // Exit if webhook URL is not set
+            }
                 
                 const requestUrl = `${MAKE_WEBHOOK_URL_GET_NUMBER}?gclid=${encodeURIComponent(gclid)}&campaignId=${encodeURIComponent(campaignId)}`;
 
